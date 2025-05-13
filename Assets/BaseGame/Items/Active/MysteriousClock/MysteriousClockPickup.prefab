@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7462541955096947240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7974183634865001859}
+  m_Layer: 0
+  m_Name: MysteriousClockPickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7974183634865001859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462541955096947240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2055502762891136936}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2565570019964441898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7974183634865001859}
+    m_Modifications:
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506924832001838609, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_Name
+      value: MysteriousClock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951641206199186320, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951641206199186320, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951641206199186320, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20e2fefb2718e4742bb6e41ed2d21d60,
+        type: 3}
+    - target: {fileID: 7951641206199186320, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3444838112246073596, guid: 63be0e9c8c71fa7439ca9257c810699a, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5506924832001838609, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 847855599174935974}
+    - targetCorrespondingSourceObject: {fileID: 5506924832001838609, guid: 63be0e9c8c71fa7439ca9257c810699a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 983408185164670749}
+  m_SourcePrefab: {fileID: 100100000, guid: 63be0e9c8c71fa7439ca9257c810699a, type: 3}
+--- !u!4 &2055502762891136936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4547545493410585218, guid: 63be0e9c8c71fa7439ca9257c810699a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2565570019964441898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8067700250583767867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5506924832001838609, guid: 63be0e9c8c71fa7439ca9257c810699a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2565570019964441898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &847855599174935974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067700250583767867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15378557787c28846b5ae567db3ada88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pickup: {fileID: 11400000, guid: fa5e21844cce2cd4aba83afeac67e337, type: 2}
+--- !u!135 &983408185164670749
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067700250583767867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.32
+  m_Center: {x: 0, y: 0, z: 0}

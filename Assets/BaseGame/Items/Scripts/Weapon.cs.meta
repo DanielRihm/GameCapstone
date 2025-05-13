@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ef74a551f4c289b49a672592cac66302
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ProjectileTransform: {instanceID: 0}
+  - ItemPickup: {instanceID: 0}
+  - WeaponAudioClip: {instanceID: 0}
+  - WeaponEmptyAudioClip: {fileID: 8300000, guid: acfb09c5db1754a45b12a756f2e1859e,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

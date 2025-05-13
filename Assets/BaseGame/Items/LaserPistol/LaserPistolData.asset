@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: LaserPistolData
+  m_EditorClassIdentifier: 
+  Name: AER9 Laser Pistol
+  Description: Titanium housed crystal array.., wait what game is this?
+  IsHeavy: 0
+  FireRate: 3.6
+  AttackGracePeriod: 0
+  Sprite: {fileID: 21300000, guid: ec652f8e50520b541938e6fe567885af, type: 3}
+  FireSound: laser_pistol_loop
+  BaseDamage: 50
+  Prefab: {fileID: -597923443330531054, guid: a973cecd13234c34cb4344a2ce16fb40, type: 3}
+  HandOffset: {x: 0.3, y: 1, z: 0}
+  ProjectileOffset: {x: 0.91, y: 1, z: 1.39}
+  Projectile: {fileID: 2094643171435598796, guid: f63b8d3ed193445468ca83aec158bdaa,
+    type: 3}
+  IsAutomatic: 1
+  ProjectileCount: 100
+  SpreadAngle: 0
+  AmmoCount: 15
+  ReloadTime: 0
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: eecc301fed956304b91d28cdea66f745, type: 2}
+  KickbackScalar: 0
+  Tier: 1

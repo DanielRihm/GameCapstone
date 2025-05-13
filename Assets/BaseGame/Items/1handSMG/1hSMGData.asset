@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: 1hSMGData
+  m_EditorClassIdentifier: 
+  Name: TT-11
+  Description: A reliable one-handed submachine gun, popular among criminals.
+  IsHeavy: 0
+  FireRate: 18
+  AttackGracePeriod: 0
+  Sprite: {fileID: 21300000, guid: a70f3047bd190d04dafcd9ebf717e0b9, type: 3}
+  FireSound: 
+  BaseDamage: 10
+  Prefab: {fileID: 5310337342852407800, guid: 423e7653ce51b43408ac67339e0401d3, type: 3}
+  HandOffset: {x: 0.5, y: 0, z: 0}
+  ProjectileOffset: {x: 0.84, y: 1, z: 1.1}
+  Projectile: {fileID: 5368386868647806487, guid: 099672abe51f6f148994b25b0744da91,
+    type: 3}
+  IsAutomatic: 1
+  ProjectileCount: 1
+  SpreadAngle: 20
+  AmmoCount: 24
+  ReloadTime: 3
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: f58368643954d974c94274aab5a35958, type: 2}
+  KickbackScalar: 0.088
+  Tier: 1

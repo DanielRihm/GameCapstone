@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981aad0ace81dbc428a02f5a23e47d36, type: 3}
+  m_Name: HeavyGun
+  m_EditorClassIdentifier: 
+  xFeedback:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -32.179253
+      outSlope: -32.179253
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.031223496
+      value: -1.0047488
+      inSlope: -0.0017913654
+      outSlope: -0.0017913654
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.00010681152
+      inSlope: 0.007250837
+      outSlope: 0.007250837
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.36072612
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yFeedback:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationFeedback:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -4.376621
+      outSlope: -4.376621
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.04479485
+      value: -0.19605008
+      inSlope: -0.8037389
+      outSlope: -0.8037389
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1075189
+    - serializedVersion: 3
+      time: 0.34993398
+      value: -0.11938624
+      inSlope: 0.22328636
+      outSlope: 0.22328636
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2337351
+      outWeight: 0.12751417
+    - serializedVersion: 3
+      time: 0.9833374
+      value: 0.0047187805
+      inSlope: 0.19593361
+      outSlope: 0.19593361
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

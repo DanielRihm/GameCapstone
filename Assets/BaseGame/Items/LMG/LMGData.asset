@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: LMGData
+  m_EditorClassIdentifier: 
+  Name: LMG-55 Deliverance
+  Description: General purpose light machine gun, with few downsides.
+  IsHeavy: 1
+  FireRate: 8
+  AttackGracePeriod: 0
+  Sprite: {fileID: 21300000, guid: 5469d9a35b7e7a845a147bffe1815980, type: 3}
+  FireSound: 
+  BaseDamage: 35
+  Prefab: {fileID: 5310337342852407800, guid: bb4c6b519ca4c8943b654f745d61b144, type: 3}
+  HandOffset: {x: 0.5, y: 0, z: 0}
+  ProjectileOffset: {x: 0.84, y: 1.5, z: 2.5}
+  Projectile: {fileID: 5368386868647806487, guid: 099672abe51f6f148994b25b0744da91,
+    type: 3}
+  IsAutomatic: 1
+  ProjectileCount: 1
+  SpreadAngle: 12.5
+  AmmoCount: 100
+  ReloadTime: 4
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: 87e8468c89741d245baa2de056673346, type: 2}
+  KickbackScalar: 0.088
+  Tier: 1

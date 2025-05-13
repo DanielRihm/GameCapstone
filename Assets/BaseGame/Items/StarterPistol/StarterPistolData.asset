@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: StarterPistolData
+  m_EditorClassIdentifier: 
+  Name: SH40
+  Description: A standard-issue .40 caliber special operations handgun.
+  IsHeavy: 0
+  FireRate: 4
+  AttackGracePeriod: 0.25
+  Sprite: {fileID: 21300000, guid: 4ad7ec23cd87555449690d27907f34f3, type: 3}
+  FireSound: colt_firing
+  BaseDamage: 30
+  Prefab: {fileID: 5310337342852407800, guid: cc881ca12823bde48938f5a5c58b17da, type: 3}
+  HandOffset: {x: 0, y: 0, z: 0}
+  ProjectileOffset: {x: 0.7, y: 1, z: 1.1}
+  Projectile: {fileID: 5368386868647806487, guid: 099672abe51f6f148994b25b0744da91,
+    type: 3}
+  IsAutomatic: 0
+  ProjectileCount: 1
+  SpreadAngle: 6
+  AmmoCount: 15
+  ReloadTime: 3
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: f58368643954d974c94274aab5a35958, type: 2}
+  KickbackScalar: 0.108
+  Tier: 1

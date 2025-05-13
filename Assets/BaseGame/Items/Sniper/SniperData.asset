@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: SniperData
+  m_EditorClassIdentifier: 
+  Name: C&T Longinus
+  Description: A sniper rifle with high-velocity rounds. Great damage, slow fire
+    rate.
+  IsHeavy: 1
+  FireRate: 1
+  AttackGracePeriod: 0
+  Sprite: {fileID: 21300000, guid: eefeac56c65c20244b291249efd83f55, type: 3}
+  FireSound: 
+  BaseDamage: 150
+  Prefab: {fileID: 5310337342852407800, guid: aa0267288a96a3d4dafb263feadc7845, type: 3}
+  HandOffset: {x: 0.5, y: 0, z: 0}
+  ProjectileOffset: {x: 0.84, y: 1.5, z: 2.5}
+  Projectile: {fileID: 5368386868647806487, guid: 6a30a284fd7ee4f47b6511b9813bab23,
+    type: 3}
+  IsAutomatic: 1
+  ProjectileCount: 1
+  SpreadAngle: 0
+  AmmoCount: 7
+  ReloadTime: 6
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: 1599551ac27ab4042b1c9a0f1c5b9893, type: 2}
+  KickbackScalar: 0.088
+  Tier: 1

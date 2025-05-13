@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7570662222063117296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2753218736603198156}
+  - component: {fileID: 105625430670422324}
+  m_Layer: 0
+  m_Name: DataTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2753218736603198156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570662222063117296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &105625430670422324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570662222063117296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647a8e21ebdc07443b964e125ba8fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveData:
+    Weapons:
+      LeftWeapon:
+        value: {fileID: 0}
+      RightWeapon:
+        value: {fileID: 11400000, guid: cce0fc2eec0c8634c8a402b67b48c270, type: 2}
+      ActiveItem:
+        value: {fileID: 0}
+    Currency:
+      ComputerChips:
+        value: 0
+      Orbs:
+        value: 0
+      Scrap:
+        value: 0
+  LeftAmmoCount:
+    value: 0
+  RightAmmoCount:
+    value: 0
+  ReloadingLeft:
+    value: 0
+  ReloadingRight:
+    value: 0
+  Save:
+    value: 0
+  Load:
+    value: 1
+  ActiveTrigger: {fileID: 0}
+  Invincibility: 0
+  MaxHealth: 6
+  CurrentHealth: 6
+  MagicCDReduction: 0
+  PlayerAdditionalSpeed: 0
+  DamageMultiplier: 0
+  Stats: 000000000000000000000000
+  StorageItems: []
+  InventoryItems: []

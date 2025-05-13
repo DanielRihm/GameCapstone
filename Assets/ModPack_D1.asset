@@ -1,0 +1,587 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7724045166177305394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: Props1-Variant
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList:
+  - Prefab: {fileID: 162548, guid: 6fd36fc025171e6429f9d552f29abbff, type: 3}
+    MainCollider: {fileID: 64076742843929720, guid: 6fd36fc025171e6429f9d552f29abbff,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: d921bc60a585e494494207e3ba01d7c0, type: 3}
+    _refCol: {fileID: 64076742843929720, guid: 6fd36fc025171e6429f9d552f29abbff, type: 3}
+  - Prefab: {fileID: 177632, guid: ea1005eee93229642a97e7e4f3d01e00, type: 3}
+    MainCollider: {fileID: 64235276542513008, guid: ea1005eee93229642a97e7e4f3d01e00,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: f96861098bd9bc84e86ca74fb47cb7aa, type: 3}
+    _refCol: {fileID: 64235276542513008, guid: ea1005eee93229642a97e7e4f3d01e00, type: 3}
+  - Prefab: {fileID: 139750, guid: 2ee208c34a9dde740b181edcfdb93211, type: 3}
+    MainCollider: {fileID: 64617285078547092, guid: 2ee208c34a9dde740b181edcfdb93211,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 09bcfec133202d347a9100aa8c7bdfee, type: 3}
+    _refCol: {fileID: 64617285078547092, guid: 2ee208c34a9dde740b181edcfdb93211, type: 3}
+  - Prefab: {fileID: 138772, guid: 438e2d5f3b9cf3344bca7c6ee3a7413b, type: 3}
+    MainCollider: {fileID: 64683924418315606, guid: 438e2d5f3b9cf3344bca7c6ee3a7413b,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 1730002d4d54711489489e00fb50c095, type: 3}
+    _refCol: {fileID: 64683924418315606, guid: 438e2d5f3b9cf3344bca7c6ee3a7413b, type: 3}
+  - Prefab: {fileID: 168602, guid: 3e0f6b0ee51e6eb42a731a26210989b9, type: 3}
+    MainCollider: {fileID: 0}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 3f8f0120dfeef6440b0acc86edb08b23, type: 3}
+    _refCol: {fileID: 0}
+  DrawMultiObjectStamps: 1
+  Spawners:
+  - Enabled: 1
+    Name: SM_Env_Rock_Round_01
+    SpawnerTag: Rock
+    StampPrefabID: 11
+    Parent: {fileID: -7724045166177305394}
+    Rules:
+    - {fileID: -8485511218451005827, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 1146209451627981618, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -4911498258761694575, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 8238349352285753303, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -1586180514873299560, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -8308105186973052791, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -5471064260378110638, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: SM_Env_Rubble_Pebbles_01
+    SpawnerTag: Rock
+    StampPrefabID: 3
+    Parent: {fileID: -7724045166177305394}
+    Rules:
+    - {fileID: -2322397414994006278, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -5043881430563313992, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: SM_Env_RockPile_Pillar_03
+    SpawnerTag: Rock
+    StampPrefabID: 2
+    Parent: {fileID: -7724045166177305394}
+    Rules:
+    - {fileID: -2563908253553793703, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 8851293683992171934, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 5753700614892339537, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 2157485292450971924, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 5117515173976662779, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  SubSpawners: []
+  VariantOf: {fileID: -8324225125306513531, guid: aa24275ead089cb4086f03927d0dac6f,
+    type: 2}
+  _editor_drawStamp: 0
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 0}
+  ParentPack: {fileID: 11400000}
+--- !u!114 &-3469298678810485403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: Bones
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: Props
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList:
+  - Prefab: {fileID: 122892, guid: 20002ad77119e9849a8815f85c128ba3, type: 3}
+    MainCollider: {fileID: 64690233481148090, guid: 20002ad77119e9849a8815f85c128ba3,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 49f1a65b22b13064c8cc228bd8f302d2, type: 3}
+    _refCol: {fileID: 64690233481148090, guid: 20002ad77119e9849a8815f85c128ba3, type: 3}
+  - Prefab: {fileID: 147436, guid: c7a5c2b51e6ab424fb46547daf81a610, type: 3}
+    MainCollider: {fileID: 64727393637089700, guid: c7a5c2b51e6ab424fb46547daf81a610,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 020106144993a4946b99db38e8dbdf56, type: 3}
+    _refCol: {fileID: 64727393637089700, guid: c7a5c2b51e6ab424fb46547daf81a610, type: 3}
+  - Prefab: {fileID: 187062, guid: 3da6cabdb2d06ad4ab1068a9b2a231cd, type: 3}
+    MainCollider: {fileID: 64154011726529118, guid: 3da6cabdb2d06ad4ab1068a9b2a231cd,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 942722f014c79e74aa00230a66076d4f, type: 3}
+    _refCol: {fileID: 64154011726529118, guid: 3da6cabdb2d06ad4ab1068a9b2a231cd, type: 3}
+  - Prefab: {fileID: 190932, guid: 20e0bf298681fcd4693097c822277593, type: 3}
+    MainCollider: {fileID: 64822036963605724, guid: 20e0bf298681fcd4693097c822277593,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: bae98b235b55fc946bc3cdc21068aef5, type: 3}
+    _refCol: {fileID: 64822036963605724, guid: 20e0bf298681fcd4693097c822277593, type: 3}
+  - Prefab: {fileID: 164116, guid: 9e2073d9f1afc544ca0b3f8d272d568e, type: 3}
+    MainCollider: {fileID: 64216610553592694, guid: 9e2073d9f1afc544ca0b3f8d272d568e,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 542d28ff2b5685646841aeaf9456071a, type: 3}
+    _refCol: {fileID: 64216610553592694, guid: 9e2073d9f1afc544ca0b3f8d272d568e, type: 3}
+  DrawMultiObjectStamps: 1
+  Spawners:
+  - Enabled: 1
+    Name: SM_Env_GlowingOrb_01
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: -3469298678810485403}
+    Rules:
+    - {fileID: 5507325401451079786, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -8148799447085498293, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 2
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  SubSpawners: []
+  VariantOf: {fileID: -3999877217861687194, guid: aa24275ead089cb4086f03927d0dac6f,
+    type: 2}
+  _editor_drawStamp: 0
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 11400000, guid: b8c5a58d1a803dd479ff1f968b42f3e1, type: 2}
+  ParentPack: {fileID: 11400000}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f132315e3189e59479a1674dc7e52576, type: 3}
+  m_Name: ModPack_D1
+  m_EditorClassIdentifier: 
+  FieldModificators:
+  - {fileID: 119991651982116360}
+  - {fileID: -7724045166177305394}
+  - {fileID: 5355639002866518034}
+  - {fileID: -3469298678810485403}
+  - {fileID: 6085402796381190018}
+  ParentPreset: {fileID: 0}
+  DisableWholePackage: 0
+  SeedMode: 0
+  CustomSeed: 0
+  ModPackType: 2
+  TagForAllSpawners: 
+  CombineSpawns: 0
+  Variables: []
+  CallOnAllMod: {fileID: 6085402796381190018}
+  CallOnAllSpawners:
+    Enabled: 0
+    Name: 
+    SpawnerTag: 
+    StampPrefabID: 0
+    Parent: {fileID: 0}
+    Rules: []
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 0
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 0
+    UseParentPackageRules: 0
+    _wasEnablingGlobalRules: 0
+    ScaleAccess: 0
+    DisplayPreviewGUI: 0
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 0
+  _EditorDisplayCallOnAll: 0
+--- !u!114 &119991651982116360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: Floor-Variant
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList:
+  - Prefab: {fileID: 103136, guid: 07f4a007d7093a64bbbdc962a82b494a, type: 3}
+    MainCollider: {fileID: 65461566911716182, guid: 07f4a007d7093a64bbbdc962a82b494a,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 94543fb00e55d31409fb907112167390, type: 3}
+    _refCol: {fileID: 65461566911716182, guid: 07f4a007d7093a64bbbdc962a82b494a, type: 3}
+  - Prefab: {fileID: 137298, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
+    MainCollider: {fileID: 65952194506493392, guid: 9830f561f80768b4f92139c1c15bc835,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 4cc906de70ac5624b9b10b53b2b6fb9b, type: 3}
+    _refCol: {fileID: 65952194506493392, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
+  - Prefab: {fileID: 121644, guid: 67f6358a70929f943ae115f8b4bcf075, type: 3}
+    MainCollider: {fileID: 65008778729494874, guid: 67f6358a70929f943ae115f8b4bcf075,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 2b33d93632b2cc1408a952ea2be3079e, type: 3}
+    _refCol: {fileID: 65008778729494874, guid: 67f6358a70929f943ae115f8b4bcf075, type: 3}
+  DrawMultiObjectStamps: 1
+  Spawners:
+  - Enabled: 1
+    Name: Cracked Floor Base
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 119991651982116360}
+    Rules:
+    - {fileID: -6403298622566977662, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -3059893140140162309, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 2
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: SM_Env_Tiles_01
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 119991651982116360}
+    Rules:
+    - {fileID: 3216751244419200199, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -2717941588677984052, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 1
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: SM_Env_Tiles_02
+    SpawnerTag: 
+    StampPrefabID: 2
+    Parent: {fileID: 119991651982116360}
+    Rules:
+    - {fileID: -232096176987767359, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 2
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  SubSpawners: []
+  VariantOf: {fileID: -390285874763974784, guid: aa24275ead089cb4086f03927d0dac6f,
+    type: 2}
+  _editor_drawStamp: 0
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 0}
+  ParentPack: {fileID: 11400000}
+--- !u!114 &5355639002866518034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: Walls1-Variant
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList:
+  - Prefab: {fileID: 176122, guid: 939f27c57ef13654eafcf37ff873a454, type: 3}
+    MainCollider: {fileID: 65087725983904536, guid: 939f27c57ef13654eafcf37ff873a454,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 8153ff91c8b7c6c4ca02b27c13ec43df, type: 3}
+    _refCol: {fileID: 65087725983904536, guid: 939f27c57ef13654eafcf37ff873a454, type: 3}
+  - Prefab: {fileID: 196870, guid: d3ce5fe83b1090246a3572735e3dd832, type: 3}
+    MainCollider: {fileID: 65952460239500918, guid: d3ce5fe83b1090246a3572735e3dd832,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: a5feaf49104af9b4988450ed26b1b28f, type: 3}
+    _refCol: {fileID: 65952460239500918, guid: d3ce5fe83b1090246a3572735e3dd832, type: 3}
+  - Prefab: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+    MainCollider: {fileID: 65082234430034430, guid: a475e72db2f78ba41b557ca01e7ed990,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: 7b6fc4d4a2910f84e8487af00020cbc4, type: 3}
+    _refCol: {fileID: 65082234430034430, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+  - Prefab: {fileID: 140754, guid: e73dff4b52d607f4ca11b85eca8f146b, type: 3}
+    MainCollider: {fileID: 65011339228261776, guid: e73dff4b52d607f4ca11b85eca8f146b,
+      type: 3}
+    subID: 0
+    _refMesh: {fileID: 4300000, guid: c0f25fbe4b222504db2ea11afb6f2cf8, type: 3}
+    _refCol: {fileID: 65011339228261776, guid: e73dff4b52d607f4ca11b85eca8f146b, type: 3}
+  DrawMultiObjectStamps: 1
+  Spawners:
+  - Enabled: 1
+    Name: Top Wall
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 5355639002866518034}
+    Rules:
+    - {fileID: 298090578774280656, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 3727969859280292911, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 1
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 1
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: Bottom Wall
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 5355639002866518034}
+    Rules:
+    - {fileID: -236675914926971038, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 6729296067585379926, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 1
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 1
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: Left Wall
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 5355639002866518034}
+    Rules:
+    - {fileID: 2228628365976819202, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: 3853119505337635112, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 1
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 1
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: Right Wall
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 5355639002866518034}
+    Rules:
+    - {fileID: 67661115549722466, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    - {fileID: -7385021732944639614, guid: aa24275ead089cb4086f03927d0dac6f, type: 2}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 1
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 1
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  SubSpawners: []
+  VariantOf: {fileID: 4809190539796761712, guid: aa24275ead089cb4086f03927d0dac6f,
+    type: 2}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 0}
+  ParentPack: {fileID: 11400000}
+--- !u!114 &6085402796381190018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList: []
+  DrawMultiObjectStamps: 1
+  Spawners: []
+  SubSpawners: []
+  VariantOf: {fileID: 0}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 0}
+  ParentPack: {fileID: 11400000}

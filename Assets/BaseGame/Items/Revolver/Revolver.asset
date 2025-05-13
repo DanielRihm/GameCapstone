@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: Revolver
+  m_EditorClassIdentifier: 
+  Name: SH40
+  Description: A standard-issue .40 caliber special operations handgun.
+  IsHeavy: 0
+  FireRate: 1
+  AttackGracePeriod: 0.25
+  Sprite: {fileID: 21300000, guid: 45edd47cb1b3a1e4bbe225b57ed64505, type: 3}
+  FireSound: colt_firing
+  BaseDamage: 100
+  Prefab: {fileID: 5310337342852407800, guid: c3ff83b942e3e184aa76fffe846d806d, type: 3}
+  HandOffset: {x: 0, y: 0, z: 0}
+  ProjectileOffset: {x: 0.7, y: 1, z: 1.1}
+  Projectile: {fileID: 5368386868647806487, guid: 3be5ed16d65fdbd4ea0c50f031034165,
+    type: 3}
+  IsAutomatic: 0
+  ProjectileCount: 1
+  SpreadAngle: 2
+  AmmoCount: 6
+  ReloadTime: 4
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: 1599551ac27ab4042b1c9a0f1c5b9893, type: 2}
+  KickbackScalar: 0.108
+  Tier: 1

@@ -1,0 +1,303 @@
+name: Main
+
+env:
+  RUN_TEST: true
+  RUN_BUILD: true
+
+concurrency:
+  group: "ship"
+  cancel-in-progress: false
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  checks: write
+  pull-requests: write
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    paths-ignore:
+      - '**.md'
+      # - '.github/**/*.yaml'
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: self-hosted
+    steps:
+      # Checkout (without LFS)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Git LFS
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      # Test
+      - name: Run tests
+        if: env.RUN_TEST == 'true'
+        id: testRunner
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          unityVersion: 2022.3.42f1
+          runAsHostUser:  true
+
+      # Artifact test results
+      - uses: actions/upload-artifact@v4
+        if: env.RUN_TEST == 'true'
+        with:
+          name: Test results
+          path: ${{ steps.testRunner.outputs.artifactsPath }}
+  version:
+    name: Version
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      # Checkout (without LFS)
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # required for github-action-get-previous-tag
+
+      - name: Get previous tag
+        id: previoustag
+        uses: 'WyriHaximus/github-action-get-previous-tag@v1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get next minor version
+        id: semver
+        uses: 'WyriHaximus/github-action-next-semvers@v1'
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+        
+      - name: Use version
+        run: |
+          echo "Calculated version: ${{ steps.semver.outputs.patch }}"
+
+      - name: Remove existing version labels
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          AUTH_HEADER="Authorization: token ${{ secrets.GITHUB_TOKEN }}"
+          LABELS_URL="https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/labels"
+          
+          # Fetch existing labels and filter for version labels
+          EXISTING_LABELS=$(curl -s -H "$AUTH_HEADER" $LABELS_URL | jq -r '.[] | select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+.*$")) | .name')
+          
+          # Remove each existing version label
+          for LABEL in $EXISTING_LABELS; do
+            curl -X DELETE -H "$AUTH_HEADER" -H "Accept: application/vnd.github.v3+json" "$LABELS_URL/$LABEL"
+          done
+
+      - name: Get short SHA
+        id: short_sha
+        run: echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+      
+      - name: Label PR with pre-release version
+        if: github.event.pull_request.merged == false
+        run: |
+          VERSION=v${{ steps.semver.outputs.patch }}-PR${{ github.event.pull_request.number }}-${{ steps.short_sha.outputs.short_sha }}
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                -H "Accept: application/vnd.github.v3+json" \
+                https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/labels \
+                -d "{\"labels\":[\"$VERSION\"]}"
+  
+      - name: Label PR with release version
+        if: github.event.pull_request.merged == true
+        run: |
+          VERSION=v${{ steps.semver.outputs.patch }}
+          PR_NUMBER=$(jq --raw-output .pull_request.number < $GITHUB_EVENT_PATH)
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                -H "Accept: application/vnd.github.v3+json" \
+                https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/labels \
+                -d "{\"labels\":[\"$VERSION\"]}"
+
+      - name: Tag the commit with the version
+        if: github.event.pull_request.merged == true
+        run: |
+          VERSION=v${{ steps.semver.outputs.patch }}
+          git tag $VERSION
+          git push origin $VERSION
+  defineBuildPlatforms:
+    name: Set Build Platforms
+    needs: test
+    runs-on: ubuntu-latest
+    env:
+      buildPlatforms: ""
+    outputs:
+      platforms: ${{ steps.setBuildPlatforms.outputs.platforms }}
+    steps:
+      # Set dev-build platforms
+      - name: Set dev-build platforms
+        if: github.event.pull_request.merged == false
+        id: setDevBuildPlatforms
+        run: |
+          echo 'buildPlatforms="[\"StandaloneWindows\"]"' >> "$GITHUB_ENV"
+      
+      # Set release-build platforms
+      - name: Set release-build platforms
+        if: github.event.pull_request.merged == true
+        id: setReleaseBuildPlatforms
+        run: |
+          echo 'buildPlatforms="[\"StandaloneWindows\",\"StandaloneWindows64\",\"StandaloneLinux64\",\"WebGL\"]"' >> "$GITHUB_ENV"
+      
+      # Set the final platforms output
+      - name: Set build platforms output
+        id: setBuildPlatforms
+        run: |
+          echo "platforms=${{ env.buildPlatforms }}" >> $GITHUB_OUTPUT
+
+  buildForAllSupportedPlatforms:
+    name: Build ${{ matrix.targetPlatform }}
+    needs: 
+      - defineBuildPlatforms
+      - version
+    runs-on: self-hosted
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform: ${{ fromJSON(needs.defineBuildPlatforms.outputs.platforms) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+            
+      # Take the label from the PR
+      - name: Get the PR labels
+        id: get_pr_labels
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_LABELS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/labels \
+            | jq -r '.[] | select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+.*$")) | .name')
+          echo "PR labels: $PR_LABELS"
+          echo "::set-output name=pr_labels::$PR_LABELS"
+
+      # set buildVersion output to either the fake or real build version
+      - name: Set Build Version
+        run: echo "::set-output name=buildVersion::${{ steps.get_pr_labels.outputs.pr_labels }}"
+        id: setBuildVersion
+          
+      # eco out the artifact name
+      - run: echo "Build-${{ steps.setBuildVersion.outputs.buildVersion }}-${{ matrix.targetPlatform }}"
+
+      - uses: game-ci/unity-builder@v4
+        id: buildRunner
+        if: env.RUN_BUILD == 'true'
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          versioning: Custom
+          version: ${{ steps.setBuildVersion.outputs.buildVersion }}-${{ matrix.targetPlatform }}
+          targetPlatform: ${{ matrix.targetPlatform }}
+          unityVersion: 2022.3.42f1
+          runAsHostUser:  true
+
+          
+      # Create the build directory if it doesn't exist
+      - name: Create build directory
+        if: env.RUN_BUILD == 'false'
+        run: mkdir -p build
+      
+      - name: Create build directory and empty file
+        run: |
+          mkdir -p build/${{ matrix.targetPlatform }}/${{ matrix.targetPlatform }}
+          touch build/${{ matrix.targetPlatform }}/${{ matrix.targetPlatform }}/empty.txt
+        if: env.RUN_BUILD == 'false'
+
+      # Rename the zip files using the PR label
+      - name: Rename the build artifact folder with the version info
+        if: env.RUN_BUILD == 'false'
+        run: |
+          for f in build/*/; do
+            mv "$f" "${f%.zip}-${{ steps.get_pr_labels.outputs.pr_labels }}"
+          done
+
+      - uses: actions/upload-artifact@v4
+      # Build-tag-platform
+        with:
+          name: Build-${{ steps.setBuildVersion.outputs.buildVersion }}-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+  githubRelease:
+    name: Publish Windows build to Github Release
+    runs-on: ubuntu-latest
+    needs:
+      - buildForAllSupportedPlatforms
+    if: github.event.pull_request.merged == true
+    steps:  
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: build
+          pattern: Build*
+          merge-multiple: false
+
+      - name: Get the PR labels
+        id: get_pr_labels
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_LABELS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/labels \
+            | jq -r '.[] | select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+.*$")) | .name')
+          echo "PR labels: $PR_LABELS"
+          echo "::set-output name=pr_labels::$PR_LABELS"
+
+      # Zip the top directories in build
+      - name: Zip build
+        run: |
+          for d in build/*/; do
+            zip -r "${d%/}.zip" "$d"
+          done
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.get_pr_labels.outputs.pr_labels }}
+          files: build/Build-*.zip
+          draft: true
+  githubPages:
+    name: Deploy static content to Pages
+    needs: buildForAllSupportedPlatforms
+    if: github.event.pull_request.merged == true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: build
+          pattern: Build*WebGL*
+          merge-multiple: true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the build directory
+          path: 'build/WebGL'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

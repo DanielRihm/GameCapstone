@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: db23e2b4d64b81d45b40039cf0a486bd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - idleUp: {instanceID: 0}
+  - idleRight: {instanceID: 0}
+  - idleDown: {instanceID: 0}
+  - idleLeft: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

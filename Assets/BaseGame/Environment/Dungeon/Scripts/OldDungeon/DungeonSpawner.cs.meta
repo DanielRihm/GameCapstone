@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3b5d573e39c95e74eac597cbd87bea20
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bossRoomSouthPrefab: {fileID: 17875847532089947, guid: bd6dd49eff8fbee469e46d06db5b47eb,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

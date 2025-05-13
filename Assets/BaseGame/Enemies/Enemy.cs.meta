@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 89a46687f53cd284289878ef1dd47b0c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MovementSet: {instanceID: 0}
+  - Target: {instanceID: 0}
+  - _chipPickup: {fileID: 9141459233196469127, guid: 21c033b58af12044fa977ed77f8197a6,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

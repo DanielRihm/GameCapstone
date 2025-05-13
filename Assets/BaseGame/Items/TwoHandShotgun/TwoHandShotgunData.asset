@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91483d3bf3eeb6048b1ff4cbbeb873c0, type: 3}
+  m_Name: TwoHandShotgunData
+  m_EditorClassIdentifier: 
+  Name: SSG-12 "Buster"
+  Description: A semi-automatic magazine-fed shotgun that fires 12 gauge buckshot.
+  IsHeavy: 1
+  FireRate: 0.9
+  AttackGracePeriod: 0.25
+  Sprite: {fileID: 21300000, guid: 93e3cf3d4f46f374593e22f2a1e99edd, type: 3}
+  FireSound: colt_firing
+  BaseDamage: 16
+  Prefab: {fileID: 5310337342852407800, guid: 9de7efc1712b3f6438cea427a7288182, type: 3}
+  HandOffset: {x: 0.5, y: 0, z: 0}
+  ProjectileOffset: {x: 0.84, y: 1, z: 1.1}
+  Projectile: {fileID: 5368386868647806487, guid: 217ec47ec6d3cdc49a1a6135dd27e03d,
+    type: 3}
+  IsAutomatic: 1
+  ProjectileCount: 8
+  SpreadAngle: 32
+  AmmoCount: 8
+  ReloadTime: 3
+  ReloadSound: 
+  Feedback:
+  - {fileID: 11400000, guid: 1599551ac27ab4042b1c9a0f1c5b9893, type: 2}
+  KickbackScalar: 0.108
